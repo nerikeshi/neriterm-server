@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.4] - 2026-02-18
+
+### Added
+
+- Claude Code Hooks-based event detection (replaces PTY output pattern matching)
+- Transcript reader to extract last assistant message for push notifications
+- `/hook` HTTP endpoint for receiving hook events from Claude Code
+- `configure-hooks.sh` script for standalone hooks configuration
+- Automatic hooks configuration during server installation
+
+### Changed
+
+- Push notifications now show actual Claude response instead of generic "Task completed"
+- Simplified notification categories to `task_stop` and `input_required`
+- All hook events support detailed message passthrough from payload
+
+### Removed
+
+- OutputAnalyzer (PTY output pattern matching) - replaced by Hooks
+- `error` and `claude_response` notification categories
+
 ## [1.0.3] - 2025-01-20
 
 ### Added
