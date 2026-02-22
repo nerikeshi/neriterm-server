@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.9] - 2026-02-23
+
+### Added
+
+- Quick Task execution from push notifications (approve/run commands remotely)
+- Tool context in state events for actionable notification UI
+
+### Security
+
+- Use `crypto.timingSafeEqual` for all token comparisons (timing attack prevention)
+- Add REVIEW_TOKEN minimum 32-character length validation
+- Remove token from URL query parameters (Bearer-only authentication)
+- Require Bearer auth for `/status` endpoint details (unauthenticated returns minimal info)
+- Block review clients from terminal input and resize operations
+
+### Changed
+
+- API_VERSION now reads from package.json dynamically (stays in sync with releases)
+
 ## [1.0.8] - 2026-02-22
 
 ### Fixed
