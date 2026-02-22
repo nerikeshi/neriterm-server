@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.8] - 2026-02-22
+
+### Fixed
+
+- Add pre-flight server startup check before registering with launchctl, preventing KeepAlive restart loops on failure
+- Auto-retry with `npm rebuild` if initial startup fails due to native module issues
+- Fully stop existing service on reinstall (`launchctl remove` + kill port process)
+- Clear logs before service registration to avoid stale error confusion
+
 ## [1.0.7] - 2026-02-22
 
 ### Fixed
