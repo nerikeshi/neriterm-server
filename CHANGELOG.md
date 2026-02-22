@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.5] - 2026-02-22
+
+### Security
+
+- Fix CRITICAL path traversal vulnerability in TranscriptReader (restrict to `~/.claude/*.jsonl`)
+- Add request body size limit (1MB) on hook endpoint
+- Add transcript file size check (10MB max)
+- Add input validation with length limits and control character rejection
+- Add rate limiting (100 req/min) on hook endpoint
+- Add payload sanitization to strip unknown fields
+- Add stale session cleanup to prevent memory leaks
+- Remove sensitive data from debug logs to prevent log injection
+
 ## [1.0.4] - 2026-02-18
 
 ### Added
