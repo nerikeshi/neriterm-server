@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.10] - 2026-02-28
+
+### Added
+
+- Test approval message type for testing approval UI from client
+
+### Changed
+
+- Increase output buffer size default from 1,000 to 5,000 lines
+- Increase max initial output size from 100KB to 1MB for reconnection payloads
+
+### Fixed
+
+- Extend waiting notification dedup window to 5 minutes
+- Server restart reconnection reliability and debug log cleanup
+
+### Security
+
+- Fix CRITICAL/HIGH/MEDIUM vulnerabilities from security review
+
 ## [1.0.9] - 2026-02-23
 
 ### Added
