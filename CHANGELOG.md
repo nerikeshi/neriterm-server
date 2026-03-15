@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.12] - 2026-03-15
+
+### Added
+
+- Allow unauthenticated localhost access to `/status` HTML page (no Bearer token needed for local debugging)
+
+### Changed
+
+- Refactor echo detection from stty-based PTY attribute check to application-level echo probe
+- Detect password prompts via output pattern matching instead of `execSync`
+- Remove `child_process.execSync` dependency from PTYManager
+- Reduce MAX_INITIAL_OUTPUT_SIZE from 1MB to 256KB to prevent iOS reconnection loop
+
 ## [1.0.10] - 2026-02-28
 
 ### Added
