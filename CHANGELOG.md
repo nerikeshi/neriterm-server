@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.13] - 2026-03-20
+
+### Changed
+
+- Replace echo probe with termios ECHO flag detection via `stty` for more reliable echo state detection
+- Add auth URL detection and automatic `ANTHROPIC_API_KEY` injection for remote OAuth flows
+
+### Fixed
+
+- Fix npm cache permission errors in build-release script by using temporary cache directory
+- Fix missing PTY mock in SessionManager tests
+
 ## [1.0.12] - 2026-03-15
 
 ### Added
